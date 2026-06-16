@@ -15,7 +15,7 @@
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Hanken+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Hanken+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
     --parch:oklch(96% 0.012 85); --paper:oklch(94% 0.016 82); --parch-2:oklch(92% 0.018 80); --bone:oklch(89% 0.02 80);
@@ -23,7 +23,7 @@
     --stone:oklch(19% 0.018 80); --stone-2:oklch(27% 0.02 90);
     --gold:oklch(72% 0.10 85); --line:oklch(82% 0.02 80);
     --accent:oklch(50% 0.13 40); --accent-lite:oklch(66% 0.14 42);
-    --display:"Cinzel",Georgia,serif; --body:"Hanken Grotesk","Helvetica Neue",Arial,sans-serif;
+    --display:"Marcellus",Georgia,serif; --body:"Hanken Grotesk","Helvetica Neue",Arial,sans-serif;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   body{background:var(--parch);color:var(--ink);font-family:var(--body);font-weight:300;line-height:1.65;-webkit-font-smoothing:antialiased}
@@ -55,6 +55,11 @@
   td:last-child{text-align:right;font-weight:600;color:var(--accent)}
   .grade{margin-top:16px;text-align:center;background:var(--accent);color:var(--parch);padding:11px;border-radius:10px;font-weight:600;letter-spacing:.1em;font-size:.78rem;text-transform:uppercase}
   .radar{display:block;margin:6px auto 0}
+  .radar .ring{fill:none;stroke:oklch(88% 0.015 82);stroke-width:.5}
+  .radar .spoke{stroke:oklch(88% 0.015 82);stroke-width:.5}
+  .radar .data{fill:var(--accent);fill-opacity:.2;stroke:var(--accent);stroke-width:1.6;stroke-linejoin:round}
+  .radar .dot{fill:var(--accent)}
+  .radar .rlab{font-family:var(--body);font-weight:500;font-size:7px;fill:var(--ink-soft)}
   .note{text-align:center;font-size:.78rem;color:var(--ink-soft);font-style:italic;margin-top:6px}
   .accord{font-style:italic;text-align:center;color:var(--ink)}
   .btn{display:inline-block;margin-top:14px;background:var(--accent);color:var(--parch);text-decoration:none;font-weight:600;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;padding:12px 24px;border-radius:24px}
@@ -83,8 +88,8 @@
         <line x1="23" y1="18" x2="23" y2="32"/><line x1="15" y1="24" x2="31" y2="24"/></g>
     </svg>
     <div class="brand">Takelsa Premium</div>
-    <h1>PICHOLINE</h1>
-    <div class="tifi-h">ⵒⵛⵍⵏ</div>
+    <h1>Picholine</h1>
+    <div class="tifi-h">ⵒⵉⵛⵓⵍⵉⵏ</div>
     <div class="sub">Rare &amp; singulière — Huile d'Olive Vierge</div>
     <div class="claim">« L'olive de table sublimée — unique en son genre. »</div>
   </header>
@@ -124,12 +129,12 @@
           <circle cx="80" cy="239" r="1.7" fill="#a85a2c" stroke="none"/>
           <line x1="80" y1="241" x2="80" y2="250"/><line x1="74.5" y1="245" x2="85.5" y2="245"/>
         </g>
-        <text x="80" y="292" text-anchor="middle" font-family="Cinzel,Georgia,serif" font-weight="600" font-size="10" letter-spacing="0.5" fill="#a85a2c">PICHOLINE</text>
-        <text x="80" y="305" text-anchor="middle" font-family="Cinzel,Georgia,serif" font-size="6.5" letter-spacing="2" fill="#a85a2c">ⵒⵛⵍⵏ</text>
+        <text x="80" y="292" text-anchor="middle" font-family="Marcellus,Georgia,serif" font-weight="600" font-size="10" letter-spacing="0.5" fill="#a85a2c">PICHOLINE</text>
+        <text x="80" y="305" text-anchor="middle" font-family="Marcellus,Georgia,serif" font-size="6.5" letter-spacing="2" fill="#a85a2c">ⵒⵉⵛⵓⵍⵉⵏ</text>
         <line x1="71" y1="316" x2="89" y2="316" stroke="#a85a2c" stroke-width="1"/>
         <text x="80" y="332" text-anchor="middle" font-family="Hanken Grotesk,Arial,sans-serif" font-weight="600" font-size="4.6" letter-spacing="1.4" fill="#2c2c2c">TAKELSA PREMIUM</text>
         <text x="80" y="345" text-anchor="middle" font-family="Hanken Grotesk,Arial,sans-serif" font-size="3.8" letter-spacing="0.3" fill="#6b6b5a">HUILE D'OLIVE VIERGE</text>
-        <text x="80" y="360" text-anchor="middle" font-family="Cinzel,Georgia,serif" font-size="5.5" letter-spacing="1" fill="#9a7d3a">750 ml</text>
+        <text x="80" y="360" text-anchor="middle" font-family="Marcellus,Georgia,serif" font-size="5.5" letter-spacing="1" fill="#9a7d3a">750 ml</text>
       </svg>
       <p class="note">Étiquette provisoire — à harmoniser avec les créations de Wayma. Couleur d'huile indicative.</p>
     </section>
@@ -149,8 +154,8 @@
     <section>
       <div class="eyebrow">Traçabilité</div>
       <div class="grid">
-        <div class="cell"><div class="k">Origine</div><div class="v">Takelsa, Dar El Joundi · Cap Bon</div></div>
-        <div class="cell"><div class="k">Terroir</div><div class="v">≈ 15 km de la Méditerranée</div></div>
+        <div class="cell"><div class="k">Origine</div><div class="v">Bir Ezzit, Takelsa · Cap Bon</div></div>
+        <div class="cell"><div class="k">Terroir</div><div class="v">≈ 9 km de la mer de Korbous · GPS 36°47′N 10°40′E</div></div>
         <div class="cell"><div class="k">Récolte</div><div class="v">Octobre 2025 · manuelle, précoce</div></div>
         <div class="cell"><div class="k">Extraction</div><div class="v">À froid (&lt; 27 °C)</div></div>
       </div>
@@ -169,24 +174,7 @@
 
     <section>
       <div class="eyebrow">Profil sensoriel</div>
-      <svg class="radar" width="300" height="300" viewBox="0 0 300 300" aria-label="Profil sensoriel">
-        <g fill="none" stroke="oklch(82% 0.02 80)" stroke-width="1">
-          <polygon points="150,62 238,150 150,238 62,150"/>
-          <polygon points="150,84 216,150 150,216 84,150"/>
-          <polygon points="150,106 194,150 150,194 106,150"/>
-          <polygon points="150,128 172,150 150,172 128,150"/>
-        </g>
-        <g stroke="oklch(82% 0.02 80)" stroke-width="1">
-          <line x1="150" y1="150" x2="150" y2="40"/><line x1="150" y1="150" x2="260" y2="150"/>
-          <line x1="150" y1="150" x2="150" y2="260"/><line x1="150" y1="150" x2="40" y2="150"/>
-        </g>
-        <!-- Fruité 8 · Piquant 7 · Harmonie 9 · Amer 6 -->
-        <polygon points="150,80 212,150 150,229 97,150" fill="oklch(50% 0.13 40)" fill-opacity="0.24" stroke="oklch(50% 0.13 40)" stroke-width="2"/>
-        <g font-family="Hanken Grotesk,Arial,sans-serif" font-size="12" fill="oklch(42% 0.02 70)" text-anchor="middle">
-          <text x="150" y="30">Fruité</text><text x="272" y="154">Piquant</text>
-          <text x="150" y="282">Harmonie</text><text x="28" y="154">Amer</text>
-        </g>
-      </svg>
+      <svg class="radar" width="300" height="250" viewBox="0 0 210 175" data-vals="5,4,5,4,2,3"></svg>
       <p class="note">Profil indicatif — affiné après les retours de dégustation.</p>
     </section>
 
@@ -204,7 +192,7 @@
       <div class="eyebrow">Votre avis nous éclaire</div>
       <p class="story" style="text-align:center">Vous avez goûté ? Dites-nous en quelques minutes — ça nous aide énormément. 🫒</p>
       <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLScQH5KCGEYYU5qCzOY_uuXlcgTkROB2tRHtm0tlqnKFPAi8ug/viewform?usp=pp_url&amp;entry.1942215368=Picholine">Mon avis sur la Picholine · 2 min</a>
-      <p class="mail">✉️ <a href="mailto:lassaad.cammoun@gmail.com">lassaad.cammoun@gmail.com</a></p>
+      <!-- contact : formulaire d'avis uniquement (e-mail perso retiré 16/06) -->
     </section>
 
     <a class="back" href="index.html">← Les 3 variétés</a>
@@ -213,9 +201,26 @@
 
   <footer>
     <div class="tifi">ⵣ</div>
-    TAKELSA PREMIUM · Takelsa, Cap Bon, Tunisie<br/>Récolte 2025 · Production artisanale limitée 🫒
+    TAKELSA PREMIUM · Bir Ezzit, Takelsa — Cap Bon, Tunisie<br/>Cuvée inaugurale 2025 · Production artisanale limitée 🫒
   </footer>
 
 </div>
+<script>
+  var NS='http://www.w3.org/2000/svg';
+  var LABELS=['Fruité','Vert','Amertume','Ardence','Douceur','Rondeur'];
+  function pt(cx,cy,r,i){var a=(-90+i*60)*Math.PI/180;return [cx+r*Math.cos(a), cy+r*Math.sin(a)];}
+  function poly(cx,cy,r){var p=[];for(var i=0;i<6;i++){var q=pt(cx,cy,r,i);p.push(q[0].toFixed(1)+','+q[1].toFixed(1));}return p.join(' ');}
+  function mk(t,a){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);return e;}
+  document.querySelectorAll('.radar').forEach(function(svg){
+    var vals=svg.getAttribute('data-vals').split(',').map(Number);
+    var cx=105,cy=88,R=60,max=5;
+    for(var k=1;k<=max;k++) svg.appendChild(mk('polygon',{points:poly(cx,cy,R*k/max),'class':'ring'}));
+    for(var i=0;i<6;i++){var q=pt(cx,cy,R,i);svg.appendChild(mk('line',{x1:cx,y1:cy,x2:q[0].toFixed(1),y2:q[1].toFixed(1),'class':'spoke'}));}
+    var dp=[];for(var i=0;i<6;i++){var q=pt(cx,cy,R*vals[i]/max,i);dp.push(q[0].toFixed(1)+','+q[1].toFixed(1));}
+    svg.appendChild(mk('polygon',{points:dp.join(' '),'class':'data'}));
+    for(var i=0;i<6;i++){var q=pt(cx,cy,R*vals[i]/max,i);svg.appendChild(mk('circle',{cx:q[0].toFixed(1),cy:q[1].toFixed(1),r:2.3,'class':'dot'}));
+      var lp=pt(cx,cy,R+16,i);var t=mk('text',{x:lp[0].toFixed(1),y:lp[1].toFixed(1),'class':'rlab','text-anchor':'middle','dominant-baseline':'middle'});t.textContent=LABELS[i];svg.appendChild(t);}
+  });
+</script>
 </body>
 </html>
