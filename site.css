@@ -39,8 +39,8 @@
 /* accents par cépage, relevés juste assez pour vivre sur le sombre — vrais tons canon */
 body[data-cepage="chetoui"] { --acc:#9DB573; --acc-deep:#6E8347; }
 body[data-cepage="chemlali"]{ --acc:#D58A52; --acc-deep:#A85F30; }
-/* Picholine = VRAI prune #4A2A42 relevé — aubergine/plum, jamais rose */
-body[data-cepage="picholine"]{ --acc:#8A5A78; --acc-deep:#5C3850; }
+/* Picholine = VRAI prune profond, option B aubergine/mûre (choix PO 17/06) — jamais rose */
+body[data-cepage="picholine"]{ --acc:#6E4055; --acc-deep:#4A2A3A; }
 
 *{box-sizing:border-box;}
 html{scroll-behavior:smooth;}
@@ -281,19 +281,19 @@ section{position:relative;}
 .bottle .oil::before{content:"";position:absolute;top:0;left:0;width:100%;height:.02em;background:rgba(255,255,255,.22);}
 .bottle .sheen{position:absolute;top:.18em;left:13%;width:9%;height:.8em;background:linear-gradient(90deg,rgba(255,255,255,.26),transparent);z-index:3;border-radius:50%;}
 /* étiquette face, scellée sur le verre */
-.bottle .label{position:absolute;left:50%;top:.345em;transform:translateX(-50%);width:.78em;height:.4em;z-index:3;
+.bottle .label{position:absolute;left:50%;top:.345em;transform:translateX(-50%);width:.295em;height:.4em;z-index:3;
   background:var(--bone);background-image:radial-gradient(rgba(26,22,17,.03) .5px,transparent .5px);background-size:3px 3px;
   border-radius:.008em;box-shadow:0 .004em .02em rgba(0,0,0,.35);display:flex;flex-direction:column;align-items:center;justify-content:center;
-  text-align:center;color:var(--ink);padding:.03em .02em;overflow:hidden;}
-.bottle .label .wm{font-family:var(--font-display);font-size:.05em;letter-spacing:.14em;text-indent:.14em;color:#7E5128;line-height:1;}
-.bottle .label .pm{font-family:var(--font-sans);font-weight:600;font-size:.02em;letter-spacing:.4em;text-indent:.4em;color:var(--ink-soft);margin-top:.012em;}
-.bottle .label .seal{font-family:var(--font-glyph);font-size:.066em;line-height:1;color:var(--cepage);margin:.022em 0 .016em;}
-.bottle .label .vn{font-family:var(--font-display);font-size:.058em;line-height:1;color:var(--cepage-lo);}
-.bottle .label .cl{font-family:var(--font-mono);font-size:.0238em;letter-spacing:.05em;text-transform:uppercase;color:var(--cepage);margin-top:.014em;}
+  text-align:center;color:var(--ink);padding:.02em .01em;overflow:hidden;}
+.bottle .label .wm{font-family:var(--font-display);font-size:.038em;letter-spacing:.07em;text-indent:.07em;color:#7E5128;line-height:1;}
+.bottle .label .pm{font-family:var(--font-sans);font-weight:600;font-size:.015em;letter-spacing:.32em;text-indent:.32em;color:var(--ink-soft);margin-top:.01em;}
+.bottle .label .seal{font-family:var(--font-glyph);font-size:.056em;line-height:1;color:var(--cepage);margin:.016em 0 .012em;}
+.bottle .label .vn{font-family:var(--font-display);font-size:.05em;line-height:1;color:var(--cepage-lo);}
+.bottle .label .cl{font-family:var(--font-mono);font-size:.0205em;letter-spacing:.04em;text-transform:uppercase;color:var(--cepage);margin-top:.012em;}
 /* vignette compacte (accueil) : on garde wm + sceau + nom, on retire les fines lignes */
 .bottle.mini{--bh:128px;filter:drop-shadow(0 8px 14px rgba(0,0,0,.4));}
 .bottle.mini .pm,.bottle.mini .cl{display:none;}
-.bottle.mini .label{height:.36em;}
-.bottle.mini .label .wm{font-size:.055em;}
-.bottle.mini .label .vn{font-size:.07em;}
-.bottle.mini .label .seal{font-size:.08em;margin:.02em 0;}
+.bottle.mini .label{height:.34em;}
+.bottle.mini .label .wm{font-size:.04em;}
+.bottle.mini .label .vn{font-size:.056em;}
+.bottle.mini .label .seal{font-size:.066em;margin:.016em 0;}
