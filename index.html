@@ -1,206 +1,124 @@
+<!-- @dsCard group="Site" viewport="1080x760" name="Site — Accueil" subtitle="Registre tellurique Imazighen · le terroir en avant, le producteur effacé" -->
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>TAKELSA PREMIUM — Huile d'olive du Cap Bon</title>
-<meta name="description" content="Huile d'olive du Cap Bon — Chétoui, Chemlali, Picholine. Récolte 2025, cueillie à la main, pressée à froid." />
-<link rel="icon" href="favicon.svg" type="image/svg+xml" />
-<meta property="og:type" content="website" />
-<meta property="og:site_name" content="TAKELSA PREMIUM" />
-<meta property="og:title" content="TAKELSA PREMIUM — L'huile qui a survécu aux empires" />
-<meta property="og:description" content="Huile d'olive du Cap Bon · Chétoui · Chemlali · Picholine · Récolte 2025." />
-<meta property="og:image" content="https://bh216-tak.github.io/takelsa-premium/img/og-image.jpg" />
-<meta property="og:url" content="https://bh216-tak.github.io/takelsa-premium/" />
-<meta name="twitter:card" content="summary_large_image" />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Hanken+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --parch:oklch(96% 0.012 85); --parch-2:oklch(92% 0.018 80); --bone:oklch(89% 0.02 80);
-    --ink:oklch(26% 0.02 70); --ink-soft:oklch(42% 0.02 70);
-    --stone:oklch(19% 0.018 80); --stone-2:oklch(27% 0.02 90);
-    --olive:oklch(50% 0.075 120); --gold:oklch(74% 0.10 85); --henna:oklch(55% 0.13 40);
-    --line:oklch(82% 0.02 80);
-    --display:"Marcellus",Georgia,serif; --body:"Hanken Grotesk","Helvetica Neue",Arial,sans-serif;
-  }
-  *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
-  body{background:var(--parch);color:var(--ink);font-family:var(--body);font-weight:300;line-height:1.6;-webkit-font-smoothing:antialiased}
-  .wrap{max-width:460px;margin:0 auto}
-  .col{padding:0 24px}
-
-  /* Héro photo + voile sombre (lisibilité) */
-  .hero{position:relative;text-align:center;color:var(--bone);padding:54px 24px 40px;
-    background:linear-gradient(to bottom, oklch(17% 0.02 80/.70), oklch(15% 0.02 80/.82)),
-      url("img/hero-oliviers.jpg") center 30%/cover no-repeat}
-  .hero .seal{margin:0 auto 14px}
-  .hero .brand{font-weight:600;font-size:.64rem;letter-spacing:.5em;padding-left:.5em;color:var(--gold);text-transform:uppercase}
-  .hero h1{font-family:var(--display);font-weight:600;font-size:2.5rem;letter-spacing:.05em;line-height:1.05;margin:12px 0 6px}
-  .hero h1 .free{color:oklch(70% 0.13 42)}
-  .hero .ethos{font-family:var(--display);font-weight:500;font-size:1rem;letter-spacing:.04em;color:var(--gold)}
-  .hero .sub{max-width:36ch;margin:14px auto 0;font-size:.9rem;color:oklch(86% 0.02 85)}
-
-  .weave{height:12px;background-repeat:repeat-x;background-position:center;opacity:.7;
-    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='28' height='12'><path d='M0 10 L7 2 L14 10 L21 2 L28 10' fill='none' stroke='%23b08b2e' stroke-width='1.2'/></svg>")}
-
-  /* Bande intro compacte (caractère + geste fusionnés) */
-  .intro{padding:32px 24px 8px;text-align:center}
-  .eyebrow{font-weight:600;font-size:.66rem;letter-spacing:.3em;text-transform:uppercase;color:var(--henna)}
-  .intro p{font-size:1rem;color:var(--ink);max-width:38ch;margin:10px auto 0}
-  .intro em{color:var(--henna);font-style:italic}
-  .stats{display:flex;gap:10px;margin:20px auto 0;max-width:412px}
-  .stat{flex:1;text-align:center;background:var(--parch-2);border:1px solid var(--bone);border-radius:8px;padding:13px 6px}
-  .stat .n{font-family:var(--display);font-weight:600;font-size:1.1rem;color:var(--olive)}
-  .stat .l{font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);margin-top:4px}
-
-  /* « Un sceau, trois caractères » — étiquettes PAYSAGE, cliquables */
-  .shelf{display:flex;flex-direction:column;gap:13px;margin-top:18px}
-  a.lab{display:flex;align-items:center;gap:14px;text-decoration:none;color:inherit;
-    background:linear-gradient(100deg,var(--parch),var(--parch-2));
-    border:1px solid var(--bone);border-radius:6px;padding:14px 16px;
-    box-shadow:0 16px 32px -26px oklch(30% 0.04 80/.6);transition:transform .12s ease}
-  a.lab:active{transform:scale(.995)}
-  .lab .seal{flex:none}
-  .lab .mid{flex:1;min-width:0}
-  .lab .vname{font-family:var(--display);font-weight:600;font-size:1.3rem;letter-spacing:.04em;display:flex;align-items:baseline;gap:8px}
-  .lab .vtifi{font-family:var(--display);font-size:.68rem;letter-spacing:.26em;opacity:.8}
-  .lab .terroir{font-style:italic;font-size:.76rem;color:var(--ink-soft);margin-top:1px}
-  .lab .phrase{font-family:var(--display);font-size:.74rem;color:var(--ink);margin-top:6px;line-height:1.35}
-  .lab .grade{font-size:.55rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);margin-top:4px}
-  .lab .arrow{flex:none;color:var(--ink-soft);font-size:1.15rem;align-self:center}
-  .cap{text-align:center;color:var(--ink-soft);font-size:.78rem;font-style:italic;margin-top:16px}
-
-  .avis{text-align:center;padding:34px 24px 10px}
-  .avis p{color:var(--ink-soft);font-size:.92rem}
-  .btn{display:inline-block;margin-top:12px;background:var(--olive);color:var(--parch);text-decoration:none;font-weight:600;font-size:.7rem;letter-spacing:.13em;text-transform:uppercase;padding:11px 22px;border-radius:22px}
-  .mail{margin-top:14px;font-size:.88rem;color:var(--ink-soft)}
-  .mail a{color:var(--ink-soft)}
-  footer{background:var(--stone);color:oklch(80% 0.02 85);text-align:center;padding:30px 24px;font-size:.74rem;margin-top:20px}
-  footer .tifi{font-family:var(--display);color:var(--gold);font-size:1.1rem}
-
-  /* Apparition douce au scroll + sceau yaz qui se trace */
-  @keyframes yaz-draw{ to{ stroke-dashoffset:0 } }
-  @keyframes seal-fade{ from{opacity:0} to{opacity:1} }
-  @media (prefers-reduced-motion: no-preference){
-    .reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease, transform .6s ease}
-    .reveal.in{opacity:1;transform:none}
-    .hero .seal{animation:seal-fade 1.6s ease forwards}
-    .hero .seal circle,.hero .seal line,.hero .seal path{stroke-dasharray:360;stroke-dashoffset:360;animation:yaz-draw 1.7s ease-out forwards}
-  }
-</style>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>TAKELSA PREMIUM — Bir Ezzit, le puits d'huile</title>
+<link rel="stylesheet" href="../../styles.css" />
+<link rel="stylesheet" href="site.css" />
 </head>
-<body>
-<div class="wrap">
+<body data-cepage="chetoui">
 
+  <nav class="nav">
+    <a class="brand" href="index.html"><span class="y">ⵣ</span><span class="wm">TAKELSA</span></a>
+    <div class="links">
+      <a href="chetoui.html">Chétoui</a>
+      <a href="chemlali.html">Chemlali</a>
+      <a href="picholine.html">Picholine</a>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
   <header class="hero">
-    <svg class="seal" width="76" height="76" viewBox="0 0 118 118" aria-label="Sceau TAKELSA — yaz amazigh (homme libre)">
-      <circle cx="59" cy="59" r="55" fill="none" stroke="oklch(74% 0.10 85)" stroke-width="1"/>
-      <circle cx="59" cy="59" r="49" fill="none" stroke="oklch(74% 0.10 85)" stroke-width="0.5" opacity="0.6"/>
-      <g stroke="oklch(70% 0.13 42)" stroke-width="3.6" stroke-linecap="round" fill="none">
-        <circle cx="59" cy="41" r="5.6" fill="oklch(70% 0.13 42)" stroke="none"/>
-        <line x1="59" y1="48" x2="59" y2="86"/><line x1="39" y1="63" x2="79" y2="63"/></g>
-    </svg>
-    <div class="brand">Takelsa Premium</div>
-    <h1>Imazighen<br/><span class="free">Hommes libres</span></h1>
-    <div class="ethos">« L'huile qui a survécu aux empires »</div>
-    <p class="sub">Du Cap Bon — cueillie à la main, pressée à froid, à ≈ 9 km de la mer de Korbous.</p>
+    <div class="puits"></div>
+    <div class="coin">ⵣ</div>
+    <div class="eyebrow">Cap Bon · Tunisie · 36°47′N 10°40′E</div>
+    <h1 class="display">BIR EZZIT</h1>
+    <div class="lede">Le puits d'huile.</div>
+    <div class="coords">
+      <span>Cuvée inaugurale <b>2025</b></span>
+      <span>Récolte <b>octobre 2025</b></span>
+      <span><b>~9 km</b> de la mer de Korbous</span>
+    </div>
   </header>
 
-  <div class="weave"></div>
+  <div class="wrap">
 
-  <section class="intro reveal">
-    <div class="eyebrow">Le caractère &amp; le geste</div>
-    <p>Sur cette terre, l'olivier a traversé Carthage, Rome, les conquêtes — <em>sans jamais disparaître</em>. On l'honore simplement : récolte précoce, extraction à froid, non filtrée — rien d'autre.</p>
-    <div class="stats">
-      <div class="stat"><div class="n">À la main</div><div class="l">Récolte précoce</div></div>
-      <div class="stat"><div class="n">À froid</div><div class="l">Extraction · non filtrée</div></div>
-      <div class="stat"><div class="n">≈ 9 km</div><div class="l">De la mer</div></div>
-    </div>
-  </section>
+    <!-- ===== MANIFESTO ===== -->
+    <section class="manifesto reveal">
+      <p>La terre se souvient. Nous l'avons écoutée.</p>
+      <div class="src">Bir Ezzit · le puits d'huile</div>
+    </section>
 
-  <section class="col reveal">
-    <div class="shelf">
+    <!-- ===== TERROIR ===== -->
+    <section>
+      <div class="shead reveal">
+        <span class="eyebrow dim">Le lieu</span>
+        <h2 class="display">Une terre qui a vu passer les empires</h2>
+        <p class="sub">À neuf kilomètres de la mer, sur les hauteurs de Takelsa, des oliviers tiennent un savoir qu'on a choisi de ne pas laisser disparaître. Récolte à la main, précoce. Extraction à froid. Non filtrée.</p>
+      </div>
+      <div class="facts-strip reveal">
+        <div class="cell"><div class="k">Acidité libre</div><div class="v">0,18–0,23 <small>%</small></div></div>
+        <div class="cell"><div class="k">Altitude marine</div><div class="v">~9 <small>km</small></div></div>
+        <div class="cell"><div class="k">Récolte</div><div class="v">Oct. <small>2025</small></div></div>
+        <div class="cell"><div class="k">Volume</div><div class="v">750 <small>ml</small></div></div>
+      </div>
+    </section>
 
-      <a class="lab" href="chetoui.html">
-        <svg class="seal" width="48" height="48" viewBox="0 0 46 46" aria-hidden="true">
-          <circle cx="23" cy="23" r="21" fill="none" stroke="oklch(72% 0.10 85)" stroke-width="0.8"/>
-          <g stroke="oklch(50% 0.075 120)" stroke-width="2" stroke-linecap="round" fill="none">
-            <circle cx="23" cy="15" r="2.4" fill="oklch(50% 0.075 120)" stroke="none"/>
-            <line x1="23" y1="18" x2="23" y2="32"/><line x1="15" y1="24" x2="31" y2="24"/></g>
-        </svg>
-        <div class="mid">
-          <div class="vname" style="color:oklch(46% 0.075 120)">Chétoui <span class="vtifi">ⵛⵉⵜⵡⵉ</span></div>
-          <div class="terroir">Chaïbi · Cap Bon</div>
-          <div class="phrase">« Fruité intense &amp; ardent, révélé à froid. »</div>
-          <div class="grade">Vierge Extra · 750 ml</div>
+    <!-- ===== LES TROIS ===== -->
+    <section>
+      <div class="shead reveal">
+        <span class="eyebrow dim">Trois cépages, un seul puits</span>
+        <h2 class="display">Les variétés</h2>
+        <p class="sub">Même terroir, même geste. Trois caractères — du plus vert au plus rond, jusqu'au plus rare.</p>
+      </div>
+
+      <div class="varlist reveal">
+        <a class="varrow" href="chetoui.html" style="--vacc:#9DB573">
+          <div class="num">I</div>
+          <div class="meta">
+            <div class="nm">Chétoui<span class="tif">ⵛⴻⵜⵡⵉ</span></div>
+            <div class="ln">Le caractère du Nord : vert, franc, poivré.</div>
+            <div class="cl">Huile d'Olive Vierge Extra · Chaïbi</div>
+          </div>
+          <div class="go"><span class="poly">260 ppm</span><span>polyphénols</span><span class="arr">→</span></div>
+        </a>
+
+        <a class="varrow" href="chemlali.html" style="--vacc:#D58A52">
+          <div class="num">II</div>
+          <div class="meta">
+            <div class="nm">Chemlali<span class="tif">ⵛⴻⵎⵍⴰⵍⵉ</span></div>
+            <div class="ln">La douceur du Cap Bon : ronde, accessible.</div>
+            <div class="cl">Huile d'Olive Vierge Extra · du Cap Bon</div>
+          </div>
+          <div class="go"><span class="poly">190 ppm</span><span>polyphénols</span><span class="arr">→</span></div>
+        </a>
+
+        <a class="varrow" href="picholine.html" style="--vacc:#B084A6">
+          <div class="num">III</div>
+          <div class="meta">
+            <div class="nm">Picholine<span class="tif">ⵒⵉⵛⵓⵍⵉⵏ</span></div>
+            <div class="ln">La rare : intense &amp; singulière.</div>
+            <div class="cl">Huile d'Olive Vierge · rare &amp; singulière</div>
+          </div>
+          <div class="go"><span class="poly">290 ppm</span><span>polyphénols</span><span class="arr">→</span></div>
+        </a>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="foot reveal">
+      <div class="frow">
+        <div>
+          <div class="brand"><span class="y">ⵣ</span><span class="wm">TAKELSA</span></div>
+          <p class="legal" style="margin-top:18px">
+            Bir Ezzit, Takelsa — Cap Bon, Nabeul, Tunisie · 36°47′N 10°40′E.<br>
+            Huile d'olive 100 % mono-variétale · récolte à la main, extraction à froid · non filtrée.<br>
+            Cuvée inaugurale 2025 · à consommer de préférence avant <b>avril 2027</b> · lot <b>L-2026-06</b>.<br>
+            Producteur : Lassaad Cammoun.
+          </p>
         </div>
-        <span class="arrow">→</span>
-      </a>
-
-      <a class="lab" href="chemlali.html">
-        <svg class="seal" width="48" height="48" viewBox="0 0 46 46" aria-hidden="true">
-          <circle cx="23" cy="23" r="21" fill="none" stroke="oklch(72% 0.10 85)" stroke-width="0.8"/>
-          <g stroke="oklch(60% 0.09 85)" stroke-width="2" stroke-linecap="round" fill="none">
-            <circle cx="23" cy="15" r="2.4" fill="oklch(60% 0.09 85)" stroke="none"/>
-            <line x1="23" y1="18" x2="23" y2="32"/><line x1="15" y1="24" x2="31" y2="24"/></g>
-        </svg>
-        <div class="mid">
-          <div class="vname" style="color:oklch(50% 0.06 95)">Chemlali <span class="vtifi">ⵛⴻⵎⵍⴰⵍⵉ</span></div>
-          <div class="terroir">du Cap Bon</div>
-          <div class="phrase">« Douce &amp; équilibrée, au fruité délicat du Cap Bon. »</div>
-          <div class="grade">Vierge Extra · 750 ml</div>
+        <div class="links">
+          <a href="chetoui.html">Chétoui · I</a>
+          <a href="chemlali.html">Chemlali · II</a>
+          <a href="picholine.html">Picholine · III</a>
         </div>
-        <span class="arrow">→</span>
-      </a>
+      </div>
+    </footer>
 
-      <a class="lab" href="picholine.html">
-        <svg class="seal" width="48" height="48" viewBox="0 0 46 46" aria-hidden="true">
-          <circle cx="23" cy="23" r="21" fill="none" stroke="oklch(72% 0.10 85)" stroke-width="0.8"/>
-          <g stroke="oklch(55% 0.13 40)" stroke-width="2" stroke-linecap="round" fill="none">
-            <circle cx="23" cy="15" r="2.4" fill="oklch(55% 0.13 40)" stroke="none"/>
-            <line x1="23" y1="18" x2="23" y2="32"/><line x1="15" y1="24" x2="31" y2="24"/></g>
-        </svg>
-        <div class="mid">
-          <div class="vname" style="color:oklch(50% 0.13 40)">Picholine <span class="vtifi">ⵒⵉⵛⵓⵍⵉⵏ</span></div>
-          <div class="terroir">Rare &amp; singulière</div>
-          <div class="phrase">« L'olive de table sublimée. »</div>
-          <div class="grade">Vierge · 750 ml</div>
-        </div>
-        <span class="arrow">→</span>
-      </a>
+  </div>
 
-    </div>
-    <p class="cap">Un seul sceau-yaz, trois teintes. La signature commune, le caractère qui change.</p>
-  </section>
-
-  <section class="avis reveal">
-    <div class="eyebrow">Votre avis nous éclaire</div>
-    <p style="margin-top:8px">Vous avez goûté ? Dites-nous en 2 min — ça nous aide énormément. 🫒</p>
-    <a class="btn" href="https://forms.gle/2v7kGghkRocuxj216">Donner mon avis · 2 min</a>
-    <!-- contact : formulaire d'avis uniquement (e-mail perso retiré 16/06) -->
-  </section>
-
-  <footer>
-    <div class="tifi">ⵣ</div>
-    TAKELSA PREMIUM · Bir Ezzit, Takelsa — Cap Bon, Tunisie<br/>Cuvée inaugurale 2025 · Production artisanale limitée 🫒
-  </footer>
-
-</div>
-
-<script>
-  (function(){
-    var els = document.querySelectorAll('.reveal');
-    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: no-preference)').matches && 'IntersectionObserver' in window){
-      var io = new IntersectionObserver(function(entries){
-        entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
-      }, {threshold:.12});
-      els.forEach(function(el){ io.observe(el); });
-    } else {
-      els.forEach(function(el){ el.classList.add('in'); });
-    }
-  })();
-</script>
+  <script src="site.js"></script>
 </body>
 </html>

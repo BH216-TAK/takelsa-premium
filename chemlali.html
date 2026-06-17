@@ -1,222 +1,79 @@
+<!-- @dsCard group="Site" viewport="1080x760" name="Site — Chemlali" subtitle="Page cépage II · profil en barres · données ONH" -->
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>TAKELSA PREMIUM — Chemlali</title>
-<meta name="description" content="Chemlali du Cap Bon — doux &amp; équilibré, l'âme tunisienne. Huile d'olive vierge extra, récolte 2025." />
-<link rel="icon" href="favicon.svg" type="image/svg+xml" />
-<meta property="og:type" content="article" />
-<meta property="og:site_name" content="TAKELSA PREMIUM" />
-<meta property="og:title" content="Chemlali — TAKELSA PREMIUM" />
-<meta property="og:description" content="Doux &amp; équilibré, l'âme tunisienne. Huile d'olive vierge extra du Cap Bon, récolte 2025." />
-<meta property="og:image" content="https://bh216-tak.github.io/takelsa-premium/img/og-image.jpg" />
-<meta property="og:url" content="https://bh216-tak.github.io/takelsa-premium/chemlali.html" />
-<meta name="twitter:card" content="summary_large_image" />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Hanken+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --parch:oklch(96% 0.012 85); --paper:oklch(94% 0.016 82); --parch-2:oklch(92% 0.018 80); --bone:oklch(89% 0.02 80);
-    --ink:oklch(26% 0.02 70); --ink-soft:oklch(42% 0.02 70);
-    --stone:oklch(19% 0.018 80); --stone-2:oklch(27% 0.02 90);
-    --gold:oklch(72% 0.10 85); --line:oklch(82% 0.02 80);
-    --accent:oklch(50% 0.06 95); --accent-lite:oklch(72% 0.09 92);
-    --display:"Marcellus",Georgia,serif; --body:"Hanken Grotesk","Helvetica Neue",Arial,sans-serif;
-  }
-  *{box-sizing:border-box;margin:0;padding:0}
-  body{background:var(--parch);color:var(--ink);font-family:var(--body);font-weight:300;line-height:1.65;-webkit-font-smoothing:antialiased}
-  .wrap{max-width:460px;margin:0 auto}
-  .col{padding:0 24px}
-
-  .hero{background:radial-gradient(120% 85% at 50% -10%,var(--stone-2),var(--stone) 62%);color:var(--bone);text-align:center;padding:48px 24px 40px}
-  .hero .seal{margin:0 auto 16px}
-  .hero .brand{font-weight:600;font-size:.64rem;letter-spacing:.5em;padding-left:.5em;color:var(--gold);text-transform:uppercase}
-  .hero h1{font-family:var(--display);font-weight:600;font-size:2.7rem;letter-spacing:.06em;margin:12px 0 2px;color:var(--accent-lite)}
-  .hero .tifi-h{font-family:var(--display);font-size:.9rem;letter-spacing:.34em;color:var(--accent-lite);opacity:.9}
-  .hero .sub{font-style:italic;color:oklch(82% 0.02 85);font-size:.92rem;margin-top:12px}
-  .hero .claim{font-family:var(--display);font-weight:500;font-size:1rem;letter-spacing:.03em;color:var(--gold);margin-top:14px}
-
-  .weave{height:13px;background-repeat:repeat-x;background-position:center;opacity:.7;
-    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='28' height='13'><path d='M0 11 L7 2 L14 11 L21 2 L28 11' fill='none' stroke='%23b08b2e' stroke-width='1.2'/></svg>")}
-
-  section{margin-top:36px}
-  .eyebrow{font-weight:600;font-size:.68rem;letter-spacing:.3em;text-transform:uppercase;color:var(--accent);text-align:center;margin-bottom:14px}
-  .story{font-size:1.02rem;color:var(--ink)}
-  .grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-  .cell{background:var(--paper);border:1px solid var(--bone);border-radius:10px;padding:14px 16px}
-  .cell .k{font-weight:600;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft)}
-  .cell .v{font-size:1.02rem;margin-top:3px}
-  table{width:100%;border-collapse:collapse;font-size:.98rem}
-  td{padding:9px 2px;border-bottom:1px solid var(--bone)}
-  td:last-child{text-align:right;font-weight:600;color:var(--accent)}
-  .grade{margin-top:16px;text-align:center;background:var(--accent);color:var(--parch);padding:11px;border-radius:10px;font-weight:600;letter-spacing:.1em;font-size:.78rem;text-transform:uppercase}
-  .radar{display:block;margin:6px auto 0}
-  .radar .ring{fill:none;stroke:oklch(88% 0.015 82);stroke-width:.5}
-  .radar .spoke{stroke:oklch(88% 0.015 82);stroke-width:.5}
-  .radar .data{fill:var(--accent);fill-opacity:.2;stroke:var(--accent);stroke-width:1.6;stroke-linejoin:round}
-  .radar .dot{fill:var(--accent)}
-  .radar .rlab{font-family:var(--body);font-weight:500;font-size:7px;fill:var(--ink-soft)}
-  .note{text-align:center;font-size:.78rem;color:var(--ink-soft);font-style:italic;margin-top:6px}
-  .accord{font-style:italic;text-align:center;color:var(--ink)}
-  .btn{display:inline-block;margin-top:14px;background:var(--accent);color:var(--parch);text-decoration:none;font-weight:600;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;padding:12px 24px;border-radius:24px}
-  .mail{margin-top:16px;font-size:.9rem;color:var(--ink-soft)}
-  .mail a{color:var(--ink-soft)}
-  .back{display:block;text-align:center;margin-top:34px;font-weight:600;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);text-decoration:none}
-  footer{background:var(--stone);color:oklch(80% 0.02 85);text-align:center;padding:30px 24px;font-size:.76rem;margin-top:36px}
-  footer .tifi{font-family:var(--display);color:var(--gold);font-size:1.1rem}
-  /* Sceau yaz qui se trace a l'ouverture */
-  @keyframes yaz-draw{ to{ stroke-dashoffset:0 } }
-  @keyframes seal-fade{ from{opacity:0} to{opacity:1} }
-  @media (prefers-reduced-motion: no-preference){
-    .hero .seal{animation:seal-fade 1.6s ease forwards}
-    .hero .seal circle,.hero .seal line,.hero .seal path{stroke-dasharray:360;stroke-dashoffset:360;animation:yaz-draw 1.7s ease-out forwards}
-  }
-</style>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Chemlali · TAKELSA PREMIUM</title>
+<link rel="stylesheet" href="../../styles.css" />
+<link rel="stylesheet" href="site.css" />
 </head>
-<body>
-<div class="wrap">
+<body data-cepage="chemlali">
 
-  <header class="hero">
-    <svg class="seal" width="84" height="84" viewBox="0 0 46 46" aria-label="Sceau yaz">
-      <circle cx="23" cy="23" r="21" fill="none" stroke="oklch(72% 0.10 85)" stroke-width="0.8"/>
-      <g stroke="oklch(72% 0.09 92)" stroke-width="2" stroke-linecap="round" fill="none">
-        <circle cx="23" cy="15" r="2.4" fill="oklch(72% 0.09 92)" stroke="none"/>
-        <line x1="23" y1="18" x2="23" y2="32"/><line x1="15" y1="24" x2="31" y2="24"/></g>
-    </svg>
-    <div class="brand">Takelsa Premium</div>
-    <h1>Chemlali</h1>
-    <div class="tifi-h">ⵛⴻⵎⵍⴰⵍⵉ</div>
-    <div class="sub">du Cap Bon — Huile d'Olive Vierge Extra</div>
-    <div class="claim">« L'équilibre tunisien, tout en douceur. »</div>
-  </header>
+  <nav class="nav">
+    <a class="brand" href="index.html"><span class="y">ⵣ</span><span class="wm">TAKELSA</span></a>
+    <div class="links">
+      <a href="chetoui.html">Chétoui</a>
+      <a href="chemlali.html" aria-current="page">Chemlali</a>
+      <a href="picholine.html">Picholine</a>
+    </div>
+  </nav>
 
-  <div class="weave"></div>
+  <div class="wrap">
 
-  <div class="col">
+    <header class="vhero">
+      <div class="puits"></div>
+      <div class="num">Cépage II</div>
+      <h1 class="display">Chemlali</h1>
+      <div class="tif">ⵛⴻⵎⵍⴰⵍⵉ</div>
+      <div class="cl">Huile d'Olive Vierge Extra · du Cap Bon</div>
+      <div class="lede">La douceur du Cap Bon — ronde, accessible.</div>
+    </header>
 
-    <section style="text-align:center;margin-top:34px">
-      <div class="eyebrow">Aperçu</div>
-      <svg width="150" height="430" viewBox="0 0 160 470" role="img" aria-label="Bouteille Chemlali — étiquette provisoire" style="margin-top:6px">
-        <defs>
-          <linearGradient id="oil" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0" stop-color="#c2b35a"/><stop offset="1" stop-color="#8f8a3c"/>
-          </linearGradient>
-          <clipPath id="oilclip">
-            <path d="M68 62 C54 70,46 86,46 112 L114 112 C114 86,106 70,92 62 Z"/>
-            <rect x="46" y="110" width="68" height="348" rx="14"/>
-          </clipPath>
-        </defs>
-        <g fill="#dfe3d6" opacity="0.55">
-          <rect x="68" y="22" width="24" height="42"/>
-          <path d="M68 62 C54 70,46 86,46 112 L114 112 C114 86,106 70,92 62 Z"/>
-          <rect x="46" y="110" width="68" height="348" rx="14"/>
-        </g>
-        <g clip-path="url(#oilclip)"><rect x="44" y="96" width="72" height="366" fill="url(#oil)"/></g>
-        <rect x="54" y="122" width="6" height="300" rx="3" fill="#ffffff" opacity="0.18"/>
-        <g fill="none" stroke="#9a9c8f" stroke-width="1.4">
-          <rect x="68" y="22" width="24" height="42"/>
-          <path d="M68 62 C54 70,46 86,46 112 L114 112 C114 86,106 70,92 62 Z"/>
-          <rect x="46" y="110" width="68" height="348" rx="14"/>
-        </g>
-        <rect x="66" y="8" width="28" height="17" rx="2.5" fill="#2a2620"/>
-        <rect x="48" y="214" width="64" height="156" rx="5" fill="#f7f3e6" stroke="#e0d9c4"/>
-        <circle cx="80" cy="244" r="13" fill="none" stroke="#b89a4e" stroke-width="0.9"/>
-        <g stroke="#8a7d35" stroke-width="1.6" stroke-linecap="round">
-          <circle cx="80" cy="239" r="1.7" fill="#8a7d35" stroke="none"/>
-          <line x1="80" y1="241" x2="80" y2="250"/><line x1="74.5" y1="245" x2="85.5" y2="245"/>
-        </g>
-        <text x="80" y="292" text-anchor="middle" font-family="Marcellus,Georgia,serif" font-weight="600" font-size="11" letter-spacing="0.5" fill="#8a7d35">CHEMLALI</text>
-        <text x="80" y="305" text-anchor="middle" font-family="Marcellus,Georgia,serif" font-size="6.5" letter-spacing="2" fill="#8a7d35">ⵛⴻⵎⵍⴰⵍⵉ</text>
-        <line x1="71" y1="316" x2="89" y2="316" stroke="#8a7d35" stroke-width="1"/>
-        <text x="80" y="332" text-anchor="middle" font-family="Hanken Grotesk,Arial,sans-serif" font-weight="600" font-size="4.6" letter-spacing="1.4" fill="#2c2c2c">TAKELSA PREMIUM</text>
-        <text x="80" y="345" text-anchor="middle" font-family="Hanken Grotesk,Arial,sans-serif" font-size="3.8" letter-spacing="0.3" fill="#6b6b5a">HUILE D'OLIVE VIERGE EXTRA</text>
-        <text x="80" y="360" text-anchor="middle" font-family="Marcellus,Georgia,serif" font-size="5.5" letter-spacing="1" fill="#9a7d3a">750 ml</text>
-      </svg>
-      <p class="note">Étiquette provisoire — à harmoniser avec les créations de Wayma. Couleur d'huile indicative.</p>
-    </section>
-
-    <section>
-      <div class="eyebrow">L'histoire</div>
-      <p class="story">
-        Notre Chemlali du Cap Bon, récolté tôt et pressé <strong>à froid</strong>,
-        livre une huile <strong>douce et équilibrée</strong>, au fruité délicat.
-        L'âme tunisienne dans sa version la plus accessible — celle du quotidien
-        que l'on partage, du pain trempé aux salades du jardin.
-      </p>
-    </section>
-
-    <section>
-      <div class="eyebrow">Traçabilité</div>
-      <div class="grid">
-        <div class="cell"><div class="k">Origine</div><div class="v">Bir Ezzit, Takelsa · Cap Bon</div></div>
-        <div class="cell"><div class="k">Terroir</div><div class="v">≈ 9 km de la mer de Korbous · GPS 36°47′N 10°40′E</div></div>
-        <div class="cell"><div class="k">Récolte</div><div class="v">Octobre 2025 · manuelle, précoce</div></div>
-        <div class="cell"><div class="k">Extraction</div><div class="v">À froid (&lt; 27 °C)</div></div>
+    <section class="vgrid">
+      <div class="prose reveal">
+        <p>Le cépage le plus répandu du Cap Bon, et le plus avenant. Récoltée tôt, sa huile garde une douceur ample : amande mûre, pomme, poire, une finale presque beurrée.</p>
+        <p>Peu d'amertume, une ardence retenue. C'est l'huile du quotidien noble — celle qu'on tend à qui découvre, sans rien céder sur l'origine.</p>
+        <div class="accords">
+          <span>Poissons</span><span>Salades</span><span>Pâtisserie</span>
+        </div>
       </div>
+
+      <aside class="reveal">
+        <div class="profile">
+          <div class="ptitle">Profil sensoriel · 1–5</div>
+          <div data-profile="chemlali"></div>
+        </div>
+        <div class="analysis">
+          <div class="arow"><span class="ak">Classe</span><span class="av">Vierge Extra</span></div>
+          <div class="arow"><span class="ak">Polyphénols</span><span class="av">190 <small>ppm</small></span></div>
+          <div class="arow"><span class="ak">Acidité libre</span><span class="av">0,18–0,23 <small>%</small></span></div>
+          <div class="arow"><span class="ak">Récolte</span><span class="av">Oct. 2025</span></div>
+          <div class="arow"><span class="ak">Cépage</span><span class="av">100 % mono-variétal</span></div>
+        </div>
+      </aside>
     </section>
 
-    <section>
-      <div class="eyebrow">Analyses ONH</div>
-      <table>
-        <tr><td>Acidité libre (acide oléique)</td><td>0,18 %</td></tr>
-        <tr><td>Polyphénols totaux</td><td>190 mg/kg</td></tr>
-        <tr><td>Indice de peroxyde</td><td>6,72 meq O₂/kg</td></tr>
-        <tr><td>K232 / K270</td><td>1,92 / 0,13</td></tr>
-      </table>
-      <div class="grade">Huile d'Olive Vierge Extra — ONH 2026B0060</div>
-    </section>
+    <nav class="pager reveal">
+      <a class="prev" href="chetoui.html">← Précédent<span class="lbl">Chétoui</span></a>
+      <a class="next" href="picholine.html">Suivant →<span class="lbl">Picholine</span></a>
+    </nav>
 
-    <section>
-      <div class="eyebrow">Profil sensoriel</div>
-      <svg class="radar" width="300" height="250" viewBox="0 0 210 175" data-vals="4,2,2,1,4,4"></svg>
-      <p class="note">Profil indicatif — affiné après les retours de dégustation.</p>
-    </section>
-
-    <section>
-      <div class="eyebrow">À table</div>
-      <p class="accord">La polyvalente du quotidien.</p>
-      <div class="grid" style="margin-top:14px">
-        <div class="cell"><div class="k">S'accorde avec</div><div class="v">Salades &amp; crudités, poissons blancs, émulsions &amp; mayonnaises, légumes vapeur</div></div>
-        <div class="cell"><div class="k">Idéale pour</div><div class="v">Cuisiner comme assaisonner — et même la pâtisserie (gâteau à l'orange)</div></div>
+    <footer class="foot reveal">
+      <div class="frow">
+        <div>
+          <div class="brand"><span class="y">ⵣ</span><span class="wm">TAKELSA</span></div>
+          <p class="legal" style="margin-top:18px">Bir Ezzit, Takelsa — Cap Bon, Tunisie · 36°47′N 10°40′E.<br>Récolte à la main · extraction à froid · non filtrée · 750 ml.<br>Lot <b>L-2026-06</b> · DLUO <b>avril 2027</b>.</p>
+        </div>
+        <div class="links">
+          <a href="index.html">Accueil</a>
+          <a href="chetoui.html">Chétoui · I</a>
+          <a href="picholine.html">Picholine · III</a>
+        </div>
       </div>
-      <p class="note">🌡️ Parfaite à toute heure, en cuisine comme à table.</p>
-    </section>
-
-    <section style="text-align:center">
-      <div class="eyebrow">Votre avis nous éclaire</div>
-      <p class="story" style="text-align:center">Vous avez goûté ? Dites-nous en quelques minutes — ça nous aide énormément. 🫒</p>
-      <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLScQH5KCGEYYU5qCzOY_uuXlcgTkROB2tRHtm0tlqnKFPAi8ug/viewform?usp=pp_url&amp;entry.1942215368=Chemlali">Mon avis sur la Chemlali · 2 min</a>
-      <!-- contact : formulaire d'avis uniquement (e-mail perso retiré 16/06) -->
-    </section>
-
-    <a class="back" href="index.html">← Les 3 variétés</a>
+    </footer>
 
   </div>
-
-  <footer>
-    <div class="tifi">ⵣ</div>
-    TAKELSA PREMIUM · Bir Ezzit, Takelsa — Cap Bon, Tunisie<br/>Cuvée inaugurale 2025 · Production artisanale limitée 🫒
-  </footer>
-
-</div>
-<script>
-  var NS='http://www.w3.org/2000/svg';
-  var LABELS=['Fruité','Vert','Amertume','Ardence','Douceur','Rondeur'];
-  function pt(cx,cy,r,i){var a=(-90+i*60)*Math.PI/180;return [cx+r*Math.cos(a), cy+r*Math.sin(a)];}
-  function poly(cx,cy,r){var p=[];for(var i=0;i<6;i++){var q=pt(cx,cy,r,i);p.push(q[0].toFixed(1)+','+q[1].toFixed(1));}return p.join(' ');}
-  function mk(t,a){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);return e;}
-  document.querySelectorAll('.radar').forEach(function(svg){
-    var vals=svg.getAttribute('data-vals').split(',').map(Number);
-    var cx=105,cy=88,R=60,max=5;
-    for(var k=1;k<=max;k++) svg.appendChild(mk('polygon',{points:poly(cx,cy,R*k/max),'class':'ring'}));
-    for(var i=0;i<6;i++){var q=pt(cx,cy,R,i);svg.appendChild(mk('line',{x1:cx,y1:cy,x2:q[0].toFixed(1),y2:q[1].toFixed(1),'class':'spoke'}));}
-    var dp=[];for(var i=0;i<6;i++){var q=pt(cx,cy,R*vals[i]/max,i);dp.push(q[0].toFixed(1)+','+q[1].toFixed(1));}
-    svg.appendChild(mk('polygon',{points:dp.join(' '),'class':'data'}));
-    for(var i=0;i<6;i++){var q=pt(cx,cy,R*vals[i]/max,i);svg.appendChild(mk('circle',{cx:q[0].toFixed(1),cy:q[1].toFixed(1),r:2.3,'class':'dot'}));
-      var lp=pt(cx,cy,R+16,i);var t=mk('text',{x:lp[0].toFixed(1),y:lp[1].toFixed(1),'class':'rlab','text-anchor':'middle','dominant-baseline':'middle'});t.textContent=LABELS[i];svg.appendChild(t);}
-  });
-</script>
+  <script src="site.js"></script>
 </body>
 </html>
