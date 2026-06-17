@@ -3,8 +3,17 @@
    beaucoup de vide, le terroir et l'huile en avant, le producteur effacé.
    Anti-slop : pas de drapeau, pas de folklore, pas de gradient text,
    pas de glassmorphism. Le cuivre est le seul métal. */
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Marcellus&family=Noto+Sans+Tifinagh&family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Spline+Sans+Mono:wght@400;500;600&display=swap");
 
 :root{
+  /* polices (autonome — anciennement tokens/fonts+typography.css) */
+  --font-display:"Marcellus","Times New Roman",serif;
+  --font-serif:"Spectral","Georgia",serif;
+  --font-sans:"Archivo",system-ui,sans-serif;
+  --font-mono:"Spline Sans Mono",ui-monospace,monospace;
+  --font-glyph:"Noto Sans Tifinagh",sans-serif;
+  /* cuivre (anciennement tokens/colors.css) */
+  --copper:#9A6A3C; --copper-hi:#DAAE6E;
   --night:    #100E09;   /* fond le plus profond */
   --soil:     #15120D;   /* fond de base */
   --soil-2:   #1C180F;   /* panneau surélevé */
