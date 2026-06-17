@@ -1,20 +1,24 @@
-/* TAKELSA PREMIUM — site (registre tellurique « Imazighen »)
-   Le site a le droit d'être plus profond que l'étiquette : fond sombre,
-   beaucoup de vide, le terroir et l'huile en avant, le producteur effacé.
-   Anti-slop : pas de drapeau, pas de folklore, pas de gradient text,
-   pas de glassmorphism. Le cuivre est le seul métal.
-   AUTONOME pour le déploiement : polices + cuivre inlinés depuis le design
-   system (sinon ../../styles.css 404 à la racine de takelsa-premium — cf. DEF-091). */
 @import url("https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Marcellus&family=Noto+Sans+Tifinagh&family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Spline+Sans+Mono:wght@400;500;600&display=swap");
 
+/* TAKELSA PREMIUM — site (registre tellurique « Imazighen »)
+   100 % AUTONOME : polices + tokens inlinés ici. Ne JAMAIS lier ../../styles.css
+   (404 une fois en ligne). Le cuivre est le seul métal. */
+
+/* — tokens de base inlinés (depuis le design system) — */
 :root{
-  /* polices + cuivre inlinés (autonomie déploiement, anti-régression ../../styles.css) */
   --font-display:"Marcellus","Times New Roman",serif;
   --font-serif:"Spectral","Georgia",serif;
-  --font-sans:"Archivo",system-ui,sans-serif;
+  --font-sans:"Archivo",system-ui,-apple-system,sans-serif;
   --font-mono:"Spline Sans Mono",ui-monospace,monospace;
-  --font-glyph:"Noto Sans Tifinagh",sans-serif;
-  --copper:#9A6A3C; --copper-hi:#DAAE6E;
+  --font-glyph:"Noto Sans Tifinagh","Segoe UI",sans-serif;
+  --bone:#F1E9D8; --bone-2:#EBE1CB; --bone-deep:#E1D4B8; --bone-edge:#D8C9A8;
+  --ink:#1A1611; --ink-soft:#3B342B; --ink-muted:#6B6151; --ink-faint:rgba(26,22,17,.26);
+  --copper:#9A6A3C; --copper-lo:#744E29; --copper-hi:#DAAE6E;
+  --foil:linear-gradient(110deg,#744E29 0%,#C99A5E 28%,#F0D29A 46%,#A9763E 64%,#DAAE6E 100%);
+  --var-chetoui:#41502C; --var-chemlali:#9E4A26; --var-picholine:#4A2A42;
+}
+
+:root{
   --night:    #100E09;   /* fond le plus profond */
   --soil:     #15120D;   /* fond de base */
   --soil-2:   #1C180F;   /* panneau surélevé */
@@ -32,11 +36,11 @@
   --maxw: 1080px;
 }
 
-/* accents par cépage, éclaircis pour vivre sur le sombre */
+/* accents par cépage, relevés juste assez pour vivre sur le sombre — vrais tons canon */
 body[data-cepage="chetoui"] { --acc:#9DB573; --acc-deep:#6E8347; }
 body[data-cepage="chemlali"]{ --acc:#D58A52; --acc-deep:#A85F30; }
-body[data-cepage="picholine"]{ --acc:#AE83A4; --acc-deep:#76507060; }
-body[data-cepage="picholine"]{ --acc:#B084A6; --acc-deep:#7A5570; }
+/* Picholine = VRAI prune #4A2A42 relevé — aubergine/plum, jamais rose */
+body[data-cepage="picholine"]{ --acc:#8A5A78; --acc-deep:#5C3850; }
 
 *{box-sizing:border-box;}
 html{scroll-behavior:smooth;}
@@ -90,15 +94,19 @@ section{position:relative;}
   background:radial-gradient(118% 78% at 50% 30%, rgba(16,14,9,.34), rgba(16,14,9,.9) 76%),linear-gradient(180deg, rgba(16,14,9,.5) 0%, rgba(16,14,9,.4) 42%, var(--soil) 100%);}
 .hero > *{position:relative;z-index:2;}
 /* le Puits — la source : anneaux cuivrés + lueur, respiration lente */
-.hero .puits{width:min(94vw,880px);height:min(94vw,880px);top:48%;left:50%;transform:translate(-50%,-50%);opacity:.85;
-  background:repeating-radial-gradient(circle at center, rgba(218,174,110,.30) 0 1px, transparent 1px 15px);
-  -webkit-mask-image:radial-gradient(circle at center, #000 38%, transparent 72%);mask-image:radial-gradient(circle at center, #000 38%, transparent 72%);}
+.hero .puits{width:min(96vw,920px);height:min(96vw,920px);top:47%;left:50%;transform:translate(-50%,-50%);opacity:.95;
+  background:repeating-radial-gradient(circle at center, rgba(218,174,110,.38) 0 1px, transparent 1px 9px),repeating-radial-gradient(circle at center, rgba(218,174,110,.16) 0 1px, transparent 1px 27px);
+  -webkit-mask-image:radial-gradient(circle at center, #000 30%, transparent 70%);mask-image:radial-gradient(circle at center, #000 30%, transparent 70%);}
 .hero .source{position:absolute;z-index:1;top:48%;left:50%;width:min(60vw,440px);height:min(60vw,440px);transform:translate(-50%,-50%);
   background:radial-gradient(circle at center, rgba(218,174,110,.22), rgba(218,174,110,0) 68%);pointer-events:none;}
-.hero .coin{position:relative;width:100px;height:100px;border-radius:50%;display:grid;place-items:center;
-  font-family:var(--font-glyph);font-size:62px;color:#3A2512;margin-bottom:38px;
+.hero .coin{position:relative;width:108px;height:108px;border-radius:50%;display:grid;place-items:center;
+  font-family:var(--font-glyph);font-size:66px;color:#3A2512;margin-bottom:38px;
   background:radial-gradient(circle at 38% 30%, #F4D89E, #CD9E60 52%, #8C5F33);
-  box-shadow:inset 0 2px 3px rgba(255,255,255,.5), inset 0 -4px 7px rgba(58,37,18,.5), 0 8px 30px rgba(0,0,0,.6), 0 0 60px rgba(218,174,110,.28);}
+  box-shadow:inset 0 2px 3px rgba(255,255,255,.5), inset 0 -4px 7px rgba(58,37,18,.5),
+    0 8px 30px rgba(0,0,0,.6), 0 0 60px rgba(218,174,110,.3),
+    0 0 0 13px transparent, 0 0 0 14px rgba(218,174,110,.5),
+    0 0 0 25px transparent, 0 0 0 26px rgba(218,174,110,.34),
+    0 0 0 39px transparent, 0 0 0 40px rgba(218,174,110,.22);}
 .hero .eyebrow{position:relative;margin-bottom:26px;color:var(--copper-hi);}
 .hero h1{position:relative;font-family:var(--font-display);font-weight:400;font-size:clamp(2.4rem,7vw,4.6rem);
   letter-spacing:.12em;text-indent:.12em;margin:0;color:var(--on-soil);white-space:nowrap;text-shadow:0 2px 30px rgba(0,0,0,.5);}
@@ -132,7 +140,7 @@ section{position:relative;}
   color:#EDE4CF;font-size:clamp(1rem,2.4vw,1.25rem);max-width:30ch;text-shadow:0 1px 10px rgba(0,0,0,.7);}
 
 /* ---- bande avis (le but du cadeau : recueillir les retours) ---- */
-.feedback{text-align:center;padding:104px 0 0;}
+.feedback{text-align:center;padding:78px 0 0;}
 .feedback p{font-family:var(--font-display);font-weight:400;font-size:clamp(1.5rem,3.6vw,2.2rem);line-height:1.3;
   color:var(--on-soil);max-width:20ch;margin:0 auto 28px;}
 .btn-feedback{display:inline-block;font-family:var(--font-mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;
@@ -147,13 +155,13 @@ section{position:relative;}
 .vhero > *{position:relative;z-index:2;}
 
 /* ---- generic section heading ---- */
-.shead{padding:96px 0 0;}
+.shead{padding:64px 0 0;}
 .shead .eyebrow{display:block;}
 .shead h2{font-family:var(--font-display);font-weight:400;font-size:clamp(2rem,4.5vw,3.1rem);margin:18px 0 0;color:var(--on-soil);}
 .shead .sub{font-family:var(--font-serif);font-style:italic;color:var(--on-soil-soft);font-size:1.15rem;margin-top:10px;max-width:54ch;}
 
 /* ---- manifesto band ---- */
-.manifesto{padding:120px 0;text-align:center;}
+.manifesto{padding:84px 0;text-align:center;}
 .manifesto p{font-family:var(--font-display);font-weight:400;font-size:clamp(1.6rem,4vw,2.6rem);line-height:1.3;
   color:var(--on-soil);max-width:18ch;margin:0 auto;}
 .manifesto .src{margin-top:26px;font-family:var(--font-mono);font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--on-soil-mut);}
@@ -168,10 +176,11 @@ section{position:relative;}
 @media(max-width:720px){.facts-strip{grid-template-columns:repeat(2,1fr);}}
 
 /* ---- variety index (accueil) ---- */
-.varlist{margin-top:48px;border-top:1px solid var(--strata);}
-.varrow{display:grid;grid-template-columns:64px 1fr auto;gap:clamp(16px,4vw,46px);align-items:center;
-  padding:34px 8px;border-bottom:1px solid var(--strata);transition:background .3s,padding-left .3s;position:relative;}
+.varlist{margin-top:36px;border-top:1px solid var(--strata);}
+.varrow{display:grid;grid-template-columns:92px 1fr auto;gap:clamp(16px,4vw,42px);align-items:center;
+  padding:30px 8px;border-bottom:1px solid var(--strata);transition:background .3s,padding-left .3s;position:relative;}
 .varrow:hover{background:var(--soil-2);padding-left:20px;}
+.varrow .bottle{margin:0 auto;}
 .varrow .num{font-family:var(--font-display);font-size:2rem;color:var(--vacc);}
 .varrow .meta .nm{font-family:var(--font-display);font-size:1.9rem;color:var(--on-soil);line-height:1;}
 .varrow .meta .nm .tif{font-family:var(--font-glyph);font-size:.62em;color:var(--vacc);margin-left:.5em;letter-spacing:.12em;}
@@ -181,11 +190,13 @@ section{position:relative;}
 .varrow .go .poly{color:var(--on-soil);}
 .varrow .go .arr{font-size:1.3rem;color:var(--vacc);transition:transform .3s;}
 .varrow:hover .go .arr{transform:translateX(6px);}
-@media(max-width:640px){.varrow{grid-template-columns:48px 1fr;}.varrow .go{grid-column:2;justify-content:flex-start;margin-top:6px;}}
+@media(max-width:640px){.varrow{grid-template-columns:72px 1fr;}.varrow .go{grid-column:2;justify-content:flex-start;margin-top:6px;}}
 
 /* ---- variety page header ---- */
-.vhero{padding:140px 0 60px;position:relative;overflow:hidden;}
-.vhero .puits{width:min(60vw,560px);height:min(60vw,560px);top:-10%;right:-12%;opacity:.5;}
+.vhero{padding:120px 0 48px;position:relative;overflow:hidden;display:flex;align-items:center;gap:clamp(28px,5vw,64px);}
+.vhero .vtext{flex:1;min-width:0;}
+@media(max-width:760px){.vhero{flex-direction:column;align-items:flex-start;gap:30px;}.vhero .bottle{margin:0 auto;}}
+.vhero .puits{position:absolute;width:min(60vw,560px);height:min(60vw,560px);top:-10%;right:-12%;opacity:.5;}
 .vhero .num{font-family:var(--font-display);font-size:1.4rem;color:var(--acc);letter-spacing:.2em;}
 .vhero h1{font-family:var(--font-display);font-weight:400;font-size:clamp(3rem,8vw,5.6rem);margin:14px 0 0;color:var(--on-soil);line-height:1;}
 .vhero .tif{font-family:var(--font-glyph);font-size:1.5rem;color:var(--acc);letter-spacing:.2em;margin-top:18px;}
@@ -222,7 +233,7 @@ section{position:relative;}
 .analysis .arow .av small{font-family:var(--font-mono);font-size:.6em;letter-spacing:.04em;color:var(--on-soil-soft);margin-left:.3em;}
 
 /* ---- prev/next ---- */
-.pager{display:flex;justify-content:space-between;gap:20px;padding:100px 0 0;}
+.pager{display:flex;justify-content:space-between;gap:20px;padding:72px 0 0;}
 .pager a{font-family:var(--font-mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--on-soil-mut);transition:color .25s;}
 .pager a:hover{color:var(--acc);}
 .pager a .lbl{display:block;font-family:var(--font-display);font-size:1.4rem;letter-spacing:.02em;color:var(--on-soil);text-transform:none;margin-top:8px;}
@@ -230,7 +241,7 @@ section{position:relative;}
 .pager .next{text-align:right;}
 
 /* ---- footer ---- */
-.foot{margin-top:120px;border-top:1px solid var(--strata);padding:54px 0 70px;}
+.foot{margin-top:88px;border-top:1px solid var(--strata);padding:54px 0 70px;}
 .foot .frow{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;align-items:flex-start;}
 .foot .brand{display:flex;align-items:baseline;gap:10px;}
 .foot .brand .y{font-family:var(--font-glyph);font-size:17px;color:var(--copper-hi);}
@@ -247,10 +258,42 @@ section{position:relative;}
   html.js .reveal.in{opacity:1;transform:none;}
 }
 
-/* ---- desktop : axe central unifié, on resserre, on comble les vides (mobile intact) ---- */
-@media (min-width:861px){
+/* ---- desktop : axe central unifié, on resserre, on comble les vides (mobile intact) ---- */@media (min-width:861px){
   :root{--maxw:1060px;}
   .shead{text-align:center;}
   .shead .sub{margin-left:auto;margin-right:auto;}
   .manifesto p{max-width:20ch;}
 }
+
+/* ===== bouteille Dorica 750 — mock CSS habillé de l'étiquette (reconnaître SA bouteille) ===== */
+.bottle{--bh:210px;--cepage:var(--copper);--cepage-lo:#2C3A1C;position:relative;width:calc(var(--bh) * .35);height:var(--bh);
+  flex:0 0 auto;font-size:var(--bh);filter:drop-shadow(0 14px 22px rgba(0,0,0,.45));}
+.bottle .cap{position:absolute;top:0;left:50%;transform:translateX(-50%);width:.125em;height:.055em;border-radius:3px 3px 2px 2px;z-index:4;
+  background:linear-gradient(90deg,#3A2512,#8C5F33 42%,#5A3D22 70%,#2A1B0E);}
+.bottle .cap::after{content:"";position:absolute;left:8%;top:0;width:16%;height:100%;background:linear-gradient(90deg,rgba(244,216,158,.7),transparent);}
+.bottle .neck{position:absolute;top:.05em;left:50%;transform:translateX(-50%);width:.11em;height:.13em;z-index:2;
+  background:linear-gradient(90deg,rgba(255,255,255,.20),rgba(218,201,158,.10) 45%,rgba(0,0,0,.20));border-radius:0 0 .01em .01em;}
+.bottle .glass{position:absolute;top:.165em;left:0;width:100%;height:.835em;border-radius:.05em .05em .045em .045em;overflow:hidden;
+  background:linear-gradient(90deg,rgba(255,255,255,.13) 0%,rgba(218,201,158,.05) 24%,rgba(0,0,0,.14) 58%,rgba(255,255,255,.08) 86%,rgba(0,0,0,.16) 100%);
+  border:1px solid rgba(218,174,110,.16);box-shadow:inset 0 0 .04em rgba(255,255,255,.12);}
+.bottle .oil{position:absolute;left:0;bottom:0;width:100%;height:.6em;
+  background:linear-gradient(180deg,#A98E3A 0%,#8A7328 42%,#5E4F18 100%);}
+.bottle .oil::before{content:"";position:absolute;top:0;left:0;width:100%;height:.02em;background:rgba(255,255,255,.22);}
+.bottle .sheen{position:absolute;top:.18em;left:13%;width:9%;height:.8em;background:linear-gradient(90deg,rgba(255,255,255,.26),transparent);z-index:3;border-radius:50%;}
+/* étiquette face, scellée sur le verre */
+.bottle .label{position:absolute;left:50%;top:.345em;transform:translateX(-50%);width:.78em;height:.4em;z-index:3;
+  background:var(--bone);background-image:radial-gradient(rgba(26,22,17,.03) .5px,transparent .5px);background-size:3px 3px;
+  border-radius:.008em;box-shadow:0 .004em .02em rgba(0,0,0,.35);display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;color:var(--ink);padding:.03em .02em;overflow:hidden;}
+.bottle .label .wm{font-family:var(--font-display);font-size:.05em;letter-spacing:.14em;text-indent:.14em;color:#7E5128;line-height:1;}
+.bottle .label .pm{font-family:var(--font-sans);font-weight:600;font-size:.02em;letter-spacing:.4em;text-indent:.4em;color:var(--ink-soft);margin-top:.012em;}
+.bottle .label .seal{font-family:var(--font-glyph);font-size:.066em;line-height:1;color:var(--cepage);margin:.022em 0 .016em;}
+.bottle .label .vn{font-family:var(--font-display);font-size:.058em;line-height:1;color:var(--cepage-lo);}
+.bottle .label .cl{font-family:var(--font-mono);font-size:.0238em;letter-spacing:.05em;text-transform:uppercase;color:var(--cepage);margin-top:.014em;}
+/* vignette compacte (accueil) : on garde wm + sceau + nom, on retire les fines lignes */
+.bottle.mini{--bh:128px;filter:drop-shadow(0 8px 14px rgba(0,0,0,.4));}
+.bottle.mini .pm,.bottle.mini .cl{display:none;}
+.bottle.mini .label{height:.36em;}
+.bottle.mini .label .wm{font-size:.055em;}
+.bottle.mini .label .vn{font-size:.07em;}
+.bottle.mini .label .seal{font-size:.08em;margin:.02em 0;}
