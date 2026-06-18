@@ -262,6 +262,12 @@ section{position:relative;}
   html.js .reveal.in{opacity:1;transform:none;}
 }
 
+/* ---- mobile (<861px) : aérer le sceau — ses anneaux/halo box-shadow (~40px + glow) empiétaient sur « TAKELSA PREMIUM » (dessus) et « huile d'olive… » (dessous) ---- */
+@media (max-width:860px){
+  .hero .brandmark{margin-bottom:56px;}
+  .hero .coin{margin-bottom:56px;}
+}
+
 /* ---- desktop : axe central unifié, on resserre, on comble les vides (mobile intact) ---- */@media (min-width:861px){
   :root{--maxw:1060px;}
   /* HÉROS DESKTOP — composition ASYMÉTRIQUE (texte à gauche, le signe/puits à droite), fond sombre uni #15120D, hauteur au contenu, zéro vide. Mobile intact. */
