@@ -319,3 +319,10 @@ section{position:relative;}
 .bottle.mini .label .wm{font-size:.04em;}
 .bottle.mini .label .vn{font-size:.056em;}
 .bottle.mini .label .seal{font-size:.066em;margin:.016em 0;}
+
+/* ---- bascule de langue FR · EN dans la nav (discrète, tokens existants, 100 % autonome) ---- */
+.nav .links .lang{display:inline-flex;align-items:baseline;gap:8px;padding-left:clamp(10px,2vw,18px);
+  margin-left:clamp(2px,1vw,6px);border-left:1px solid var(--strata);}
+.nav .links .lang a{padding-bottom:0;border-bottom:0;}
+.nav .links .lang a.on{color:var(--acc);}
+.nav .links .lang .sep{color:var(--on-soil-mut);font-family:var(--font-mono);font-size:11px;line-height:1;}

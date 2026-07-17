@@ -1,6 +1,9 @@
 /* TAKELSA — site.js : barres de profil (cohérent étiquette) + apparition douce */
 (function(){
-  var AXES = ['Fruité','Vert','Amertume','Ardence','Douceur','Rondeur'];
+  // libellés des axes selon la langue du document (FR par défaut, EN si <html lang="en">)
+  var AXES_FR = ['Fruité','Vert','Amertume','Ardence','Douceur','Rondeur'];
+  var AXES_EN = ['Fruity','Green','Bitterness','Pungency','Smoothness','Roundness'];
+  var AXES = (document.documentElement.lang || 'fr').toLowerCase().indexOf('en') === 0 ? AXES_EN : AXES_FR;
   var MAX = 5;
 
   // valeurs partagées (mêmes que l'étiquette)
