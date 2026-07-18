@@ -326,3 +326,11 @@ section{position:relative;}
 .nav .links .lang a{padding-bottom:0;border-bottom:0;}
 .nav .links .lang a.on{color:var(--acc);}
 .nav .links .lang .sep{color:var(--on-soil-mut);font-family:var(--font-mono);font-size:11px;line-height:1;}
+
+/* ---- mobile : la nav se replie proprement (marque en haut, liens + bascule répartis dessous) ----
+   évite le débordement horizontal introduit par le toggle FR·EN sur petits écrans (desktop intact ≥861px) */
+@media (max-width:640px){
+  .nav{flex-wrap:wrap;row-gap:12px;}
+  .nav .links{width:100%;justify-content:space-between;gap:8px 12px;flex-wrap:wrap;}
+  .nav .links .lang{padding-left:0;margin-left:0;border-left:0;}
+}
